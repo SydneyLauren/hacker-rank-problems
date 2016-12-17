@@ -33,5 +33,14 @@ def mars_exploration(s):
 
     diffs = [c for i, c in enumerate(s) if c != sos_string[i]]
     print len(diffs)
-
 mars_exploration('SOSSOT')
+
+
+def GOT_palindrome(string):
+    l = list(string)
+    odd_count = sum([l.count(c) % 2 for c in set(l)])
+    if odd_count > 1:
+        print 'NO'
+    else:
+        print 'YES'
+GOT_palindrome('cdefghmnopqrstuvw')
