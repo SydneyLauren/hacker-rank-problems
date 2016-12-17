@@ -26,3 +26,12 @@ def two_characters(s):
                 output = len(ns)
     print output
 two_characters('xyxy')
+
+
+def mars_exploration(s):
+    sos_string = 'SOS' * (len(s) / 3)
+
+    diffs = [c for i, c in enumerate(s) if c != sos_string[i]]
+    print len(diffs)
+
+mars_exploration('SOSSOT')
