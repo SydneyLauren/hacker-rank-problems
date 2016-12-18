@@ -44,3 +44,18 @@ def GOT_palindrome(string):
     else:
         print 'YES'
 GOT_palindrome('cdefghmnopqrstuvw')
+
+
+def insertionSort(ar):
+    for i in range(1, len(ar)):  # loop from one to last index in list
+        temp_val = ar[i]  # record the current value
+        # compare the current value to each on that precedes it in the list
+        j = i
+        while j > 0 and temp_val < ar[j - 1]:
+            # if the value at previous index is greater, move it back in the list
+            ar[j] = ar[j - 1]
+            j -= 1
+        ar[j] = temp_val  # current value either maintains position or moves forward
+        print ' '.join(['%s' % k for k in ar])
+print 'insertion sort'
+insertionSort([1, 4, 3, 5, 6, 2])
