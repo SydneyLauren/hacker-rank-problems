@@ -1,4 +1,6 @@
-
+# import sys
+# h = map(int,raw_input().strip().split(' '))
+# word = raw_input().strip()
 
 def plus_minus(l, string):
     arr = map(int, string.strip().split(' '))
@@ -59,3 +61,10 @@ def insertionSort(ar):
         print ' '.join(['%s' % k for k in ar])
 print 'insertion sort'
 insertionSort([1, 4, 3, 5, 6, 2])
+
+
+def apple_and_orange(s, t, a, b, m, n, apple, orange):
+    print 'apples and oranges'
+    print len([app + a for app in apple if app + a >= s and app + a <= t])
+    print len([ora - b for ora in orange if ora + b <= t and ora + b >= s])
+apple_and_orange(7, 11, 5, 15, 3, 2, [-2, 2, 1], [5, -6])
