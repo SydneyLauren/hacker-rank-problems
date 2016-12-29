@@ -1,6 +1,12 @@
 # import sys
 # h = map(int,raw_input().strip().split(' '))
 # word = raw_input().strip()
+# n,k = raw_input().strip().split(' ')
+# n,k = [int(n),int(k)]
+# costs = raw_input().strip().split(' ')
+# costs = [int(c) for c in costs]
+# bill = raw_input().strip()
+# bill = int(bill)
 
 def plus_minus(l, string):
     arr = map(int, string.strip().split(' '))
@@ -68,3 +74,18 @@ def apple_and_orange(s, t, a, b, m, n, apple, orange):
     print len([app + a for app in apple if app + a >= s and app + a <= t])
     print len([ora - b for ora in orange if ora + b <= t and ora + b >= s])
 apple_and_orange(7, 11, 5, 15, 3, 2, [-2, 2, 1], [5, -6])
+
+
+def bon_appetit():
+    # import sys
+    # n,k = raw_input().strip().split(' ')
+    # n,k = [float(n),float(k)]
+    # costs = raw_input().strip().split(' ')
+    # costs = [float(c) for c in costs]
+    # bill = raw_input().strip()
+    # bill = float(bill)
+    calc_bill = sum([c/2 if i != k else 0 for i, c in enumerate(costs)])
+    if bill == calc_bill:
+        print 'Bon Appetit'
+    else:
+        print int(bill - calc_bill)
