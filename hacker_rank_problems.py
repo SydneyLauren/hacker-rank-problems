@@ -89,3 +89,17 @@ def bon_appetit():
         print 'Bon Appetit'
     else:
         print int(bill - calc_bill)
+
+
+def utopian_tree(lst):
+    print 'utopian tree'
+    for i in lst:
+        h = 1
+        for j in xrange(i):
+            if j % 2 == 0:
+                h *= 2
+            if j % 2 == 1:
+                h += 1
+        print h
+
+utopian_tree([0, 1, 4])
